@@ -13,6 +13,11 @@ class Settings(BaseSettings):
     CELERY_BROKER_URL: str = ""     # fallback to REDIS_URL if empty
     CELERY_RESULT_BACKEND: str = "" # fallback to REDIS_URL if empty
 
+    # AI keys
+    GROQ_API_KEY: str
+    TAVILY_API_KEY: str
+    PINECONE_API_KEY: str
+
     class Config:
         env_file = ".env"
 
